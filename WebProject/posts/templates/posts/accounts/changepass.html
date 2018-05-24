@@ -1,0 +1,15 @@
+{% extends 'posts/layout.html' %}
+
+{% block head %}
+<title>Change Password</title>
+{% endblock %}
+
+{% block content %}
+<div class="containter">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}

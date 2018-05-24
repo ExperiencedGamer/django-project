@@ -1,0 +1,9 @@
+{% extends 'posts/layout.html' %}
+{% block content %}
+<title>{{user.get_username}}</title>
+    {% if user.is_authenticated %}
+        <a href='/profile/edit'><p class="btn" style="position: absolute; font-size: 15px; top: 115px; right: 10px;">Settings</p></a>
+    {% else %}
+        <h2> Error: No active user! </h2>
+    {% endif%}
+{% endblock %}

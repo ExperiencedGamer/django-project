@@ -1,0 +1,12 @@
+{% extends 'posts/layout2.html' %}
+{% block content %}
+<title>World Poker Media</title>
+<ul class='collection'>
+    {% if user.is_authenticated %}
+    <h2 style="text-align: center;">Welcome, {{user.get_username}}!</h2>
+    {% endif%}
+    {% for post in posts %}
+        <li  style="font-size: 40px;"><a href="/posts/details/{{post.id}}" >{{post.title}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

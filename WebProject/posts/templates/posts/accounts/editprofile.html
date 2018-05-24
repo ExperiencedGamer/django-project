@@ -1,0 +1,13 @@
+{% extends 'posts/layout.html' %}
+
+<title>Edit Profile</title>
+
+{% block content %}
+<div class="containter">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}
